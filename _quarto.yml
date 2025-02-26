@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "qtm350-quiz02"
+  # navbar:
+  #   left:
+  #     - href: index.qmd
+  #       text: Home
+  #     - about.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+nav:
+  - Home: index.qmd
+  - "Life Expectancy and GDP per Capita": life-gdp.qmd
+  - "Life Expectancy and Population": life-population.qmd
+  - "Country Analysis": country.qmd
+
+
+

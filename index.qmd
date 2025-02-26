@@ -1,0 +1,13 @@
+---
+title: "qtm350-quiz02"
+---
+
+The gapminder dataset contains 6 columns and 1,704 rows. The columns are: country, continent, year, life_expectancy, population_millions, and gdp_per_capita. The dataset contains information about these variables in 142 countries over the years 1952 to 2007, with a 5-year interval. 
+
+Explore the analyses:
+
+- [Life Expectancy and GDP per Capita](life-gdp.qmd)
+
+- [Life Expectancy and Population](life-population.qmd)
+
+- [Country Analysis](country.qmd)

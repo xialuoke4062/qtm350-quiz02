@@ -1,0 +1,43 @@
+---
+title: "Country Analysis: United States"
+format:
+  html: default
+---
+
+
+Here we analyze the trends in life expectancy, GDP per capita, and population for the United States over time.
+
+```{python}
+#| echo: true
+#| eval: true
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+df = pd.read_csv('gapminder.csv')
+```
+
+```{python}
+#| echo: true
+#| eval: true
+# Filter data for the United States (change the country as desired)
+country_data = df[df['country'] == 'United States']
+
+# Plotting life expectancy, GDP per capita, and population over time
+fig, ax1 = plt.subplots(figsize=(8,6))
+
+ax1.plot(country_data['year'], country_data['life_expectancy'], label='Life Expectancy', color='blue', marker='o')
+ax1.set_xlabel('Year')
+ax1.set_ylabel('Life Expectancy', color='blue')
+ax1.tick_params(axis='y', labelcolor='blue')
+
+# Create a second y-axis for GDP per capita
+ax2 = ax1.twinx()
+ax2.plot(country_data['year'], country_data['gdp_per_capita'], label='GDP per Capita', color='red', marker='s')
+ax2.set_ylabel('GDP per Capita', color='red')
+ax2.tick_params(axis='y', labelcolor='red')
+
+plt.title('Country Analysis: United States')
+fig.tight_layout()
+plt.show()
+```
